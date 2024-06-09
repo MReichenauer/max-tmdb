@@ -1,11 +1,16 @@
-import { Container } from "react-bootstrap";
 import "../src/assets/scss/App.scss";
+import HomePage from "./pages/HomePage";
+import { Container } from "react-bootstrap";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <Container>
-      <h1>So empty, much info on this page.</h1>
-      <h2>NOT!!!🪿</h2>
+      <h1>MaxFilmDB</h1>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </Container>
   );
 }
