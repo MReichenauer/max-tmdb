@@ -1,4 +1,5 @@
 import CinemaMovieList from "../components/CinemaMovieList";
+import TopRatedMovieList from "../components/TopRatedMovieList";
 import TrendingMovieList from "../components/TrendingMovieList";
 
 const HomePage: React.FC = () => {
@@ -6,6 +7,7 @@ const HomePage: React.FC = () => {
     <>
       <CinemaMovieList />
       <TrendingMovieList />
+      <TopRatedMovieList />
     </>
   );
 };

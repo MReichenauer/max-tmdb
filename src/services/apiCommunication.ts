@@ -38,3 +38,10 @@ export const getTrendingMovies = async () => {
   );
   return res.results;
 };
+
+export const getTopRatedMovies = async () => {
+  const res = await get<ApiListOfMovies>(
+    "/movie/top_rated?include_adult=false&page=1&region=SE"
+  );
+  return res.results;
+};
