@@ -31,3 +31,10 @@ export const getCinemaMovies = async () => {
   );
   return res.results;
 };
+
+export const getTrendingMovies = async () => {
+  const res = await get<ApiListOfMovies>(
+    "/movie/popular?include_adult=false&page=1&region=SE"
+  );
+  return res.results;
+};
