@@ -1,19 +1,15 @@
 @import "bootstrap/scss/bootstrap";
 
-::-webkit-scrollbar {
-  height: 8px; 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1f5; 
-  border-radius: 24px; 
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c2c0c080;
-  border-radius: 12px; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #c2c0c0ce;
+#app {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1.5rem;
 }
