@@ -25,7 +25,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
         <Card.Body className="overviewCardBody">
           <Card.Title>{title}</Card.Title>
           <Card.Text className="mb-1">Betyg: {rate.toFixed(1)}/10</Card.Text>
-          <Card.Text>Orginal språk: {language.toLocaleUpperCase()}</Card.Text>
+          <Card.Text>Original språk: {language.toLocaleUpperCase()}</Card.Text>
         </Card.Body>
       </Card>
     </div>
