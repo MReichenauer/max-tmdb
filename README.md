@@ -11,3 +11,4 @@ Url to api - https://www.themoviedb.org/
 1. https://developers.themoviedb.org/3/getting-started
 2. https://developers.themoviedb.org/3/getting-started/append-to-response
 3. https://developers.themoviedb.org/3/getting-started/images
+4. https://developer.themoviedb.org/reference/intro/getting-started
