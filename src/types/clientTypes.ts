@@ -9,3 +9,8 @@ export type ListOfMovies = {
   title: string;
   vote_average: number;
 };
+
+export type ListOfGenres = {
+  id: number;
+  name: string;
+};

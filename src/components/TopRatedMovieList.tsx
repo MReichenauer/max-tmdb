@@ -1,38 +1,38 @@
-import { useQuery } from "@tanstack/react-query";
-import { ListOfMovies } from "../types/clientTypes";
-import { getTopRatedMovies } from "../services/apiCommunication";
 import Loading from "./Loading";
 import HorizontalListGrp from "./HorizontalListGrp";
 import OverviewCard from "./OverviewCard";
+import useTopRatedMovies from "../hooks/useTopRatedMovies";
 
 const TopRatedMovieList = () => {
   const {
-    data: moviesTopRated,
-    isLoading,
-    isError,
-    error,
-    isSuccess,
-  } = useQuery<ListOfMovies[]>({
-    queryKey: ["topRatedMovies"],
-    queryFn: getTopRatedMovies,
-  });
+    data: topRatedMovies,
+    isLoading: isLoadingTopRated,
+    isError: isErrorTopRated,
+    error: errorTopRated,
+    isSuccess: isSuccessTopRated,
+  } = useTopRatedMovies();
+
+  if (isLoadingTopRated) {
+    return <Loading />;
+  }
+
+  if (isErrorTopRated) {
+    return <p>{errorTopRated.message}</p>;
+  }
 
   return (
     <>
-      {isLoading && <Loading />}
-
-      {isError && <p>{error.message}</p>}
-      {isSuccess && (
+      {isSuccessTopRated && (
         <div className="container mb-5">
           <h2>Högst betygsatta filmer!</h2>
           <p className="mb-2">
             <em>
-              Bläddra till höger mellan {moviesTopRated.length}st högst
+              Bläddra till höger mellan {topRatedMovies.length}st högst
               betygsatta filmer.
             </em>
           </p>
           <HorizontalListGrp>
-            {moviesTopRated.map((movieTopRated) => (
+            {topRatedMovies.map((movieTopRated) => (
               <OverviewCard
                 key={movieTopRated.id}
                 id={movieTopRated.id}

@@ -1,38 +1,37 @@
-import { useQuery } from "@tanstack/react-query";
-import { ListOfMovies } from "../types/clientTypes";
-import { getTrendingMovies } from "../services/apiCommunication";
 import Loading from "./Loading";
 import HorizontalListGrp from "./HorizontalListGrp";
 import OverviewCard from "./OverviewCard";
+import useTrendingMovies from "../hooks/useTrendingMovies";
 
 const TrendingMovieList = () => {
   const {
-    data: moviesTrending,
-    isLoading,
-    isError,
-    error,
-    isSuccess,
-  } = useQuery<ListOfMovies[]>({
-    queryKey: ["trendingMovies"],
-    queryFn: getTrendingMovies,
-  });
+    data: trendingMovies,
+    isLoading: isLoadingTrending,
+    isError: isErrorTrending,
+    error: errorTrending,
+    isSuccess: isSuccessTrending,
+  } = useTrendingMovies();
 
+  if (isLoadingTrending) {
+    return <Loading />;
+  }
+
+  if (isErrorTrending) {
+    return <p>{errorTrending.message}</p>;
+  }
   return (
     <>
-      {isLoading && <Loading />}
-
-      {isError && <p>{error.message}</p>}
-      {isSuccess && (
+      {isSuccessTrending && (
         <div className="container mt-5 mb-5">
           <h2>Populära filmer</h2>
           <p className="mb-2">
             <em>
-              Bläddra till höger mellan {moviesTrending.length}st populära
+              Bläddra till höger mellan {trendingMovies.length}st populära
               filmer.
             </em>
           </p>
           <HorizontalListGrp>
-            {moviesTrending.map((movieTrending) => (
+            {trendingMovies.map((movieTrending) => (
               <OverviewCard
                 key={movieTrending.id}
                 id={movieTrending.id}

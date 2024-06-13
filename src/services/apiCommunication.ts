@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ApiListOfMovies } from "../types/apiTypes";
+import { ApiListOfGenres, ApiListOfMovies } from "../types/apiTypes";
 
 // const API_KEY = import.meta.env.VITE_API_KEY;
 const API_TOKEN = import.meta.env.VITE_API_TOKEN;
@@ -44,4 +44,16 @@ export const getTopRatedMovies = async () => {
     "/movie/top_rated?include_adult=false&page=1&region=SE"
   );
   return res.results;
+};
+
+export const getAllGenres = async () => {
+  const res = await get<ApiListOfGenres>("/genre/movie/list?language=sv-SE");
+  return res.genres;
+};
+
+export const getMoviesByGenre = async (id: number) => {
+  const res = await get<ApiListOfMovies>(
+    `/discover/movie?include_adult=false&include_video=false&page=1&sort_by=popularity.desc&with_genres=${id}`
+  );
+  return res;
 };

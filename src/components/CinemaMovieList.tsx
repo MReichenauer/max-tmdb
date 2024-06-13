@@ -1,37 +1,37 @@
-import { useQuery } from "@tanstack/react-query";
-import { ListOfMovies } from "../types/clientTypes";
-import { getCinemaMovies } from "../services/apiCommunication";
 import Loading from "./Loading";
 import HorizontalListGrp from "./HorizontalListGrp";
 import OverviewCard from "./OverviewCard";
+import useCinemaMovies from "../hooks/useCinemaMovies";
 
 const CinemaMovieList = () => {
   const {
-    data: moviesCinema,
-    isLoading,
-    isError,
-    error,
-    isSuccess,
-  } = useQuery<ListOfMovies[]>({
-    queryKey: ["cinemaMovies"],
-    queryFn: getCinemaMovies,
-  });
+    data: cinemaMovies,
+    isLoading: isLoadingCinema,
+    isError: isErrorCinema,
+    error: errorCinema,
+    isSuccess: isSuccessCinema,
+  } = useCinemaMovies();
+
+  if (isLoadingCinema) {
+    return <Loading />;
+  }
+
+  if (isErrorCinema) {
+    return <p>{errorCinema.message}</p>;
+  }
 
   return (
     <>
-      {isLoading && <Loading />}
-
-      {isError && <p>{error.message}</p>}
-      {isSuccess && (
+      {isSuccessCinema && (
         <div className="container mt-5">
           <h2>På bio just nu!</h2>
           <p className="mb-2">
             <em>
-              Bläddra till höger mellan {moviesCinema.length}st aktuella filmer.
+              Bläddra till höger mellan {cinemaMovies.length}st aktuella filmer.
             </em>
           </p>
           <HorizontalListGrp>
-            {moviesCinema.map((movieCinema) => (
+            {cinemaMovies.map((movieCinema) => (
               <OverviewCard
                 key={movieCinema.id}
                 id={movieCinema.id}
