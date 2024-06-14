@@ -51,9 +51,9 @@ export const getAllGenres = async () => {
   return res.genres;
 };
 
-export const getMoviesByGenre = async (id: number) => {
+export const getMoviesByGenre = async (id: number, page: number) => {
   const res = await get<ApiListOfMovies>(
-    `/discover/movie?include_adult=false&include_video=false&page=1&sort_by=popularity.desc&with_genres=${id}`
+    `/discover/movie?include_adult=false&include_video=false&page=${page}&sort_by=popularity.desc&with_genres=${id}`
   );
   return res;
 };
