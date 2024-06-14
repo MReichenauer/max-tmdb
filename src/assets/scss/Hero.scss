@@ -1,0 +1,86 @@
+.heroContainer {
+  background-image: url("../img/horizontal_wallpaper_vastness_of_space_and_cosmic_elements_design_features_vibrant_colors_and_swirling_art_pattern_abstraction_hd_abstract-1920x1080.jpg");  
+  background-size: 100% 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroContent {
+background: rgba(255, 255, 255, 0.05);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:  center;
+  height: 55%;
+  width: 70%;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.heroTitle {
+  color: #fad5d5;
+  font-size: 3rem;
+  font-weight: 500;
+  font-style:normal;
+}
+
+.heroText {
+  color: #fad5d5;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style:italic;
+}
+
+@media only screen and (min-width: 495px) {
+  .heroContent {
+    height: 148px;
+    width: 335px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .heroContent {
+    height: 168px;
+    width: 365px;
+  }
+}
+
+@media only screen and (min-width: 1203px) {
+  .heroContent {
+    height: 188px;
+    width: 385px;
+  }
+
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+  
+  .heroText { 
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1326px) {
+  .heroContainer {
+    aspect-ratio:unset;
+    height: 80vh;
+  }
+
+  .heroContent {
+    height: 238px;
+    width: 475px;
+  }
+
+  .heroTitle {
+    font-size: 4rem;
+  }
+  
+  .heroText { 
+    font-size: 1.5rem;
+  }
+}

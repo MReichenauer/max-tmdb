@@ -5,13 +5,14 @@ import { Route, Routes } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import MoviesByGenrePage from "./pages/MoviesByGenrePage";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <div id="app">
       <NavBar />
+      <Hero />
       <Container>
-        <h1>MaxFilmDB</h1>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/genres/:id" element={<MoviesByGenrePage />} />
