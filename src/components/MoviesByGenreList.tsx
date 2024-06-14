@@ -44,7 +44,7 @@ const MoviesByGenreList = () => {
           <ul className="row px-0">
             {moviesByGenres.results.map((movieByGenre) => (
               <div
-                className="d-flex justify-content-center col-6 col-sm-6 col-md-4 col-lg-2 mb-4"
+                className="d-flex justify-content-center col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-2"
                 key={movieByGenre.id}
               >
                 <OverviewCard
