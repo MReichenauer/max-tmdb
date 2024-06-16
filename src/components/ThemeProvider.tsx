@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 
 type ThemeType = "light" | "dark";
 type ThemeContextType = { theme: ThemeType; toggleTheme: () => void };
@@ -6,7 +6,7 @@ type ThemeContextType = { theme: ThemeType; toggleTheme: () => void };
 const darkColor = "#121212";
 const lightColor = "#FFFFFF";
 
-export const ThemeContext = React.createContext<ThemeContextType>(
+export const ThemeContext = createContext<ThemeContextType>(
   {} as ThemeContextType
 );
 

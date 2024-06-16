@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../assets/scss/OverviewCard.scss";
 import { Card } from "react-bootstrap";
 
@@ -20,10 +21,14 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
     <div className="me-2">
       <Card key={id} className="overviewCardFull">
         <div className="d-flex justify-content-center">
-          <Card.Img variant="top" src={image_url} alt={`Image of ${title}`} />
+          <Link to={`/movie/${id}`}>
+            <Card.Img variant="top" src={image_url} alt={`Image of ${title}`} />
+          </Link>
         </div>
         <Card.Body className="overviewCardBody mt-0 pt-2">
-          <Card.Title>{title}</Card.Title>
+          <Link to={`/movie/${id}`} className="overviewCardTitle">
+            <Card.Title>{title}</Card.Title>
+          </Link>
           <Card.Text className="mb-1">Betyg: {rate.toFixed(1)}/10</Card.Text>
           <Card.Text>Original språk: {language.toLocaleUpperCase()}</Card.Text>
         </Card.Body>

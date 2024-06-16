@@ -1,0 +1,29 @@
+.horizentalGrpPersonsFull {
+  width: 100%;
+  padding: 2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  
+  
+  &::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #E2DFD2;
+    border-radius: 24px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #868181;
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #696868;
+  }
+}

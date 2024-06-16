@@ -8,7 +8,7 @@ import arrowLeft from "../assets/img/arrows/arrowLeft.svg";
 import arrowRight from "../assets/img/arrows/arrowRight.svg";
 
 const MoviesByGenreList = () => {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams();
   const genreId = Number(id);
   const location = useLocation();
   const navigate = useNavigate();

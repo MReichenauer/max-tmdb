@@ -1,0 +1,29 @@
+.actorOrCrewCard {
+  height: 17.5rem;
+  width: 19.37rem;
+  min-width: 9rem;
+  margin: 0.5rem;
+  border: none;
+  overflow: hidden;
+  background: none;
+  color: inherit;
+}
+
+.actorOrCrewCardTitle {
+  font-size: 1.1rem;
+}
+
+.actorOrCrewCardBody {
+  padding: 0;
+}
+
+.actorOrCrewCardImg {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+  object-fit: cover;
+}
+
