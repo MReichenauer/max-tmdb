@@ -1,6 +1,6 @@
 .actorOrCrewCard {
   height: 17.5rem;
-  width: 19.37rem;
+  max-width: 10.37rem;
   min-width: 9rem;
   margin: 0.5rem;
   border: none;
@@ -25,5 +25,10 @@
   margin-top: 0.5rem;
   margin-bottom: 0.7rem;
   object-fit: cover;
+}
+
+.linkStyleNone {
+ text-decoration: none;
+ color: inherit;
 }
 

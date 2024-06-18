@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import DetailCard from "./DetailCard";
 import { Button } from "react-bootstrap";
 import noImage from "../assets/img/no-image-6665.png";
+import noImageSquare from "../assets/img/noimageSquare.jpg";
 import ActorOrCrewCard from "./ActorOrCrewCard";
 import HorizontalListGrpPersons from "./HorizontalListGrpPersons";
 
@@ -46,6 +47,7 @@ const SingleMovie = () => {
 
   const singleActor = sortedActors.map((actor) => (
     <ActorOrCrewCard
+      path={`/people/${actor.id}`}
       key={actor.cast_id}
       image_url={
         actor.profile_path
@@ -62,6 +64,7 @@ const SingleMovie = () => {
 
   const crewMember = singleMovie.credits.crew.map((crew) => (
     <ActorOrCrewCard
+      path={`/people/${crew.id}`}
       key={crew.credit_id}
       image_url={
         crew.profile_path
@@ -89,7 +92,7 @@ const SingleMovie = () => {
             image_url={
               singleMovie.poster_path
                 ? `https://image.tmdb.org/t/p/w500${singleMovie.poster_path}`
-                : noImage
+                : noImageSquare
             }
             alt={`Image of ${singleMovie.original_title}`}
             genres={genreLinks}

@@ -56,3 +56,17 @@ export type CrewMember = {
   job: string;
   profile_path: string;
 };
+
+export type SinglePersonById = {
+  id: number;
+  name: string;
+  gender: number;
+  birthday: string;
+  place_of_birth: string;
+  known_for_department: string;
+  profile_path: string;
+  credits: {
+    cast: ListOfMovies[];
+    crew: ListOfMovies[];
+  };
+};

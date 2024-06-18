@@ -6,6 +6,7 @@ import useAllGenres from "../hooks/useAllGenres";
 import { Button, ButtonGroup, Container } from "react-bootstrap";
 import arrowLeft from "../assets/img/arrows/arrowLeft.svg";
 import arrowRight from "../assets/img/arrows/arrowRight.svg";
+import noImageSquare from "../assets/img/noimageSquare.jpg";
 
 const MoviesByGenreList = () => {
   const { id } = useParams();
@@ -71,7 +72,11 @@ const MoviesByGenreList = () => {
                 <OverviewCard
                   key={movieByGenre.id}
                   id={movieByGenre.id}
-                  image_url={`https://image.tmdb.org/t/p/w300${movieByGenre.poster_path}`}
+                  image_url={
+                    movieByGenre.poster_path
+                      ? `https://image.tmdb.org/t/p/w300${movieByGenre.poster_path}`
+                      : noImageSquare
+                  }
                   title={movieByGenre.title}
                   rate={movieByGenre.vote_average}
                   language={movieByGenre.original_language}

@@ -22,14 +22,20 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
       <Card key={id} className="overviewCardFull">
         <div className="d-flex justify-content-center">
           <Link to={`/movie/${id}`}>
-            <Card.Img variant="top" src={image_url} alt={`Image of ${title}`} />
+            <div className="movieImage">
+              <Card.Img
+                variant="top"
+                src={image_url}
+                alt={`Image of ${title}`}
+              />
+            </div>
           </Link>
         </div>
         <Card.Body className="overviewCardBody mt-0 pt-2">
           <Link to={`/movie/${id}`} className="overviewCardTitle">
             <Card.Title>{title}</Card.Title>
           </Link>
-          <Card.Text className="mb-1">Betyg: {rate.toFixed(1)}/10</Card.Text>
+          <Card.Text className="mb-1">Betyg: {rate.toFixed(1)}/10⭐</Card.Text>
           <Card.Text>Original språk: {language.toLocaleUpperCase()}</Card.Text>
         </Card.Body>
       </Card>
