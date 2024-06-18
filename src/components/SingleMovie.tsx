@@ -10,12 +10,6 @@ import HorizontalListGrpPersons from "./HorizontalListGrpPersons";
 const SingleMovie = () => {
   const { id } = useParams();
 
-  // This is needed on the key for actors and crew be cause they can be listed multiply times
-  // and if that is the case, there key will we used twice
-  const randomNumber = () => {
-    return Math.floor(Math.random() * 1000 + 1.35);
-  };
-
   const {
     data: singleMovie,
     isLoading: isLoadingMovie,
@@ -52,7 +46,7 @@ const SingleMovie = () => {
 
   const singleActor = sortedActors.map((actor) => (
     <ActorOrCrewCard
-      key={`${actor.id}${randomNumber()}`}
+      key={actor.cast_id}
       image_url={
         actor.profile_path
           ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
@@ -68,7 +62,7 @@ const SingleMovie = () => {
 
   const crewMember = singleMovie.credits.crew.map((crew) => (
     <ActorOrCrewCard
-      key={`${crew.id}${randomNumber()}`}
+      key={crew.credit_id}
       image_url={
         crew.profile_path
           ? `https://image.tmdb.org/t/p/w200${crew.profile_path}`

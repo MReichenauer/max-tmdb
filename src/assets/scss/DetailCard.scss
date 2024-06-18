@@ -20,3 +20,25 @@
   height: 25rem;
   width: 16.87rem;
 }
+
+@media only screen and (min-width: 768px) {
+  .detailCardFull {
+    display: flex;
+    flex-direction: row;
+    width: 50rem;
+    justify-content: center;
+    & p {
+      width: 25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 996px) {
+ 
+
+  .detailCardFull {
+    & p {
+      margin-left: 0.8rem;
+    }
+  }
+}

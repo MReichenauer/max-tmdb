@@ -39,6 +39,7 @@ export type SingleMovieById = {
 
 export type Actor = {
   id: number;
+  cast_id: string;
   gender: number;
   original_name: string;
   character: string;
@@ -49,6 +50,7 @@ export type Actor = {
 
 export type CrewMember = {
   id: number;
+  credit_id: string;
   gender: number;
   original_name: string;
   job: string;
