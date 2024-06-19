@@ -33,7 +33,9 @@ const SingleMovie = () => {
 
   const genreLinks = singleMovie.genres.map((genre) => (
     <Link to={`/genres/${genre.id}`} key={genre.id}>
-      <Button className="me-1 mb-2 p-1 px-2">{genre.name}</Button>
+      <Button variant="outline-primary" className="me-1 mb-2 p-1 px-2">
+        {genre.name}
+      </Button>
     </Link>
   ));
 
