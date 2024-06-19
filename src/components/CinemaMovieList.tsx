@@ -1,4 +1,3 @@
-import Loading from "./Loading";
 import HorizontalListGrp from "./HorizontalListGrp";
 import OverviewCard from "./OverviewCard";
 import useCinemaMovies from "../hooks/useCinemaMovies";
@@ -6,15 +5,10 @@ import useCinemaMovies from "../hooks/useCinemaMovies";
 const CinemaMovieList = () => {
   const {
     data: cinemaMovies,
-    isLoading: isLoadingCinema,
     isError: isErrorCinema,
     error: errorCinema,
     isSuccess: isSuccessCinema,
   } = useCinemaMovies();
-
-  if (isLoadingCinema) {
-    return <Loading />;
-  }
 
   if (isErrorCinema) {
     return <p>{errorCinema.message}</p>;

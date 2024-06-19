@@ -1,11 +1,12 @@
 import { Spinner } from "react-bootstrap";
+import "../assets/scss/LoadingSpinner.scss";
 
 const Loading = () => {
   return (
     <>
-      <Spinner />
-      <br />
-      <p>Laddar..</p>
+      <div className="loadingContainer">
+        <Spinner role="alert-loading" />
+      </div>
     </>
   );
 };

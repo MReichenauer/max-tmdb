@@ -1,4 +1,3 @@
-import Loading from "./Loading";
 import HorizontalListGrp from "./HorizontalListGrp";
 import OverviewCard from "./OverviewCard";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
@@ -6,15 +5,10 @@ import useTopRatedMovies from "../hooks/useTopRatedMovies";
 const TopRatedMovieList = () => {
   const {
     data: topRatedMovies,
-    isLoading: isLoadingTopRated,
     isError: isErrorTopRated,
     error: errorTopRated,
     isSuccess: isSuccessTopRated,
   } = useTopRatedMovies();
-
-  if (isLoadingTopRated) {
-    return <Loading />;
-  }
 
   if (isErrorTopRated) {
     return <p>{errorTopRated.message}</p>;

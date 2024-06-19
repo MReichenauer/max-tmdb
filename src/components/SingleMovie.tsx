@@ -104,8 +104,15 @@ const SingleMovie = () => {
           />
         </div>
       )}
-      <HorizontalListGrpPersons children={singleActor} />
-      <HorizontalListGrpPersons children={crewMember} />
+      <HorizontalListGrpPersons
+        children={singleActor}
+        description="Bläddra till höger mellan alla skådespelare"
+      />
+
+      <HorizontalListGrpPersons
+        children={crewMember}
+        description="Bläddra till höger mellan alla medverkande personer"
+      />
     </>
   );
 };

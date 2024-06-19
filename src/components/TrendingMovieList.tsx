@@ -1,4 +1,3 @@
-import Loading from "./Loading";
 import HorizontalListGrp from "./HorizontalListGrp";
 import OverviewCard from "./OverviewCard";
 import useTrendingMovies from "../hooks/useTrendingMovies";
@@ -6,15 +5,10 @@ import useTrendingMovies from "../hooks/useTrendingMovies";
 const TrendingMovieList = () => {
   const {
     data: trendingMovies,
-    isLoading: isLoadingTrending,
     isError: isErrorTrending,
     error: errorTrending,
     isSuccess: isSuccessTrending,
   } = useTrendingMovies();
-
-  if (isLoadingTrending) {
-    return <Loading />;
-  }
 
   if (isErrorTrending) {
     return <p>{errorTrending.message}</p>;
