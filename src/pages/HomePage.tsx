@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
-import CinemaMovieList from "../components/CinemaMovieList";
-import TopRatedMovieList from "../components/TopRatedMovieList";
-import TrendingMovieList from "../components/TrendingMovieList";
+import CinemaMovieList from "../components/lists/CinemaMovieList";
+import TopRatedMovieList from "../components/lists/TopRatedMovieList";
+import TrendingMovieList from "../components/lists/TrendingMovieList";
 import Hero from "../components/Hero";
 import useCinemaMovies from "../hooks/useCinemaMovies";
 import useTrendingMovies from "../hooks/useTrendingMovies";

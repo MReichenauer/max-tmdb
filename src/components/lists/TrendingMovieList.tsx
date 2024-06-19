@@ -1,6 +1,6 @@
-import HorizontalListGrp from "./HorizontalListGrp";
-import OverviewCard from "./OverviewCard";
-import useTrendingMovies from "../hooks/useTrendingMovies";
+import HorizontalListGrp from "../lists/HorizontalListGrp";
+import OverviewCard from "../cards/OverviewCard";
+import useTrendingMovies from "../../hooks/useTrendingMovies";
 
 const TrendingMovieList = () => {
   const {

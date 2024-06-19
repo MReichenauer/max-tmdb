@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import usePersonById from "../hooks/usePersonById";
-import DetailCardPerson from "./DetailCardPerson";
+import DetailCardPerson from "./cards/DetailCardPerson";
 import noImageSquare from "../assets/img/noimageSquare.jpg";
-import HorizontalListGrp from "./HorizontalListGrp";
-import OverviewCard from "./OverviewCard";
+import HorizontalListGrp from "./lists/HorizontalListGrp";
+import OverviewCard from "./cards/OverviewCard";
 import Loading from "./Loading";
 
 const SinglePerson = () => {

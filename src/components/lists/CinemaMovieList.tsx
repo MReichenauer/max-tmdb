@@ -1,6 +1,6 @@
-import HorizontalListGrp from "./HorizontalListGrp";
-import OverviewCard from "./OverviewCard";
-import useCinemaMovies from "../hooks/useCinemaMovies";
+import HorizontalListGrp from "../lists/HorizontalListGrp";
+import OverviewCard from "../cards/OverviewCard";
+import useCinemaMovies from "../../hooks/useCinemaMovies";
 
 const CinemaMovieList = () => {
   const {

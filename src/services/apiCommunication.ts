@@ -2,10 +2,9 @@ import axios from "axios";
 import { ApiListOfGenres, ApiListOfMovies } from "../types/apiTypes";
 import { SingleMovieById, SinglePersonById } from "../types/clientTypes";
 
-// const API_KEY = import.meta.env.VITE_API_KEY;
-const API_TOKEN = import.meta.env.VITE_API_TOKEN;
+const API_TOKEN: string = import.meta.env.VITE_API_TOKEN;
 
-const BASE_URL = "https://api.themoviedb.org/3";
+const BASE_URL: string = "https://api.themoviedb.org/3";
 
 const instance = axios.create({
   baseURL: BASE_URL,
@@ -21,7 +20,6 @@ const get = async <T>(endpoint: string) => {
     const res = await instance.get<T>(endpoint);
     return res.data;
   } catch (error) {
-    console.log("Error: ", error);
     throw error;
   }
 };
@@ -48,7 +46,7 @@ export const getTopRatedMovies = async () => {
 };
 
 export const getAllGenres = async () => {
-  const res = await get<ApiListOfGenres>("/genre/movie/list?language=sv-SE");
+  const res = await get<ApiListOfGenres>("/genre/movie/list?language=sv-SV");
   return res.genres;
 };
 

@@ -1,12 +1,12 @@
 import Loading from "./Loading";
 import useMovieById from "../hooks/useMovieById";
 import { Link, useParams } from "react-router-dom";
-import DetailCard from "./DetailCard";
+import DetailCard from "./cards/DetailCard";
 import { Button } from "react-bootstrap";
 import noImage from "../assets/img/no-image-6665.png";
 import noImageSquare from "../assets/img/noimageSquare.jpg";
-import ActorOrCrewCard from "./ActorOrCrewCard";
-import HorizontalListGrpPersons from "./HorizontalListGrpPersons";
+import ActorOrCrewCard from "./cards/ActorOrCrewCard";
+import HorizontalListGrpPersons from "./lists/HorizontalListGrpPersons";
 
 const SingleMovie = () => {
   const { id } = useParams();
@@ -30,9 +30,6 @@ const SingleMovie = () => {
   if (!singleMovie) {
     return <p>Kunde inte hitta filmen, försök igen!</p>;
   }
-
-  console.log("Actors: ", singleMovie.credits.cast);
-  console.log("Crew: ", singleMovie.credits.crew);
 
   const genreLinks = singleMovie.genres.map((genre) => (
     <Link to={`/genres/${genre.id}`} key={genre.id}>

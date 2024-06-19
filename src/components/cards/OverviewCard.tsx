@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../assets/scss/OverviewCard.scss";
+import "../../assets/scss/OverviewCard.scss";
 import { Card } from "react-bootstrap";
 
 type OverviewCardProps = {

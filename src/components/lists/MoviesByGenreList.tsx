@@ -1,12 +1,12 @@
-import Loading from "./Loading";
-import OverviewCard from "./OverviewCard";
+import Loading from "../Loading";
+import OverviewCard from "../cards/OverviewCard";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import useMoviesByGenre from "../hooks/useMoviesByGenre";
-import useAllGenres from "../hooks/useAllGenres";
+import useMoviesByGenre from "../../hooks/useMoviesByGenre";
+import useAllGenres from "../../hooks/useAllGenres";
 import { Button, ButtonGroup, Container } from "react-bootstrap";
-import arrowLeft from "../assets/img/arrows/arrowLeft.svg";
-import arrowRight from "../assets/img/arrows/arrowRight.svg";
-import noImageSquare from "../assets/img/noimageSquare.jpg";
+import arrowLeft from "../../assets/img/arrows/arrowLeft.svg";
+import arrowRight from "../../assets/img/arrows/arrowRight.svg";
+import noImageSquare from "../../assets/img/noimageSquare.jpg";
 
 const MoviesByGenreList = () => {
   const { id } = useParams();

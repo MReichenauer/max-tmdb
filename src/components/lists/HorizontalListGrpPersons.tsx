@@ -1,4 +1,4 @@
-import "../assets/scss/HorizontalListGrpPersons.scss";
+import "../../assets/scss/HorizontalListGrpPersons.scss";
 import { ListGroup } from "react-bootstrap";
 import { ReactNode } from "react";
 

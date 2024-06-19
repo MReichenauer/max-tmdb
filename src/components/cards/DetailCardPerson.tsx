@@ -1,4 +1,4 @@
-import "../assets/scss/DetailCardPerson.scss";
+import "../../assets/scss/DetailCardPerson.scss";
 import { Card } from "react-bootstrap";
 
 type DetailCardPersonProps = {

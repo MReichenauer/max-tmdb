@@ -1,6 +1,6 @@
-import HorizontalListGrp from "./HorizontalListGrp";
-import OverviewCard from "./OverviewCard";
-import useTopRatedMovies from "../hooks/useTopRatedMovies";
+import HorizontalListGrp from "../lists/HorizontalListGrp";
+import OverviewCard from "../cards/OverviewCard";
+import useTopRatedMovies from "../../hooks/useTopRatedMovies";
 
 const TopRatedMovieList = () => {
   const {
