@@ -16,12 +16,8 @@ const instance = axios.create({
 });
 
 const get = async <T>(endpoint: string) => {
-  try {
-    const res = await instance.get<T>(endpoint);
-    return res.data;
-  } catch (error) {
-    throw error;
-  }
+  const res = await instance.get<T>(endpoint);
+  return res.data;
 };
 
 export const getCinemaMovies = async () => {
