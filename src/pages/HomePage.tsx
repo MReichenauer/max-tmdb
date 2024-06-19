@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Hero />
-      <Container>
+      <Container className="pb-5">
         {isLoading && <Loading />}
         <CinemaMovieList />
         <TrendingMovieList />

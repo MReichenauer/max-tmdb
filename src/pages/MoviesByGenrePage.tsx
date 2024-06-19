@@ -3,7 +3,7 @@ import MoviesByGenreList from "../components/MoviesByGenreList";
 
 const MoviesByGenrePage = () => {
   return (
-    <Container>
+    <Container className="pb-5">
       <MoviesByGenreList />
     </Container>
   );

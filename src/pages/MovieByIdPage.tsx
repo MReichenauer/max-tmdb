@@ -3,7 +3,7 @@ import SingleMovie from "../components/SingleMovie";
 
 const MovieByIdPage = () => {
   return (
-    <Container>
+    <Container className="pb-5">
       <SingleMovie />
     </Container>
   );

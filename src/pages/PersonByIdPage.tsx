@@ -3,7 +3,7 @@ import SinglePerson from "../components/SinglePerson";
 
 const PersonByIdPage = () => {
   return (
-    <Container>
+    <Container className="pb-5">
       <SinglePerson />
     </Container>
   );
