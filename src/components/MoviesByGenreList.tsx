@@ -54,6 +54,13 @@ const MoviesByGenreList = () => {
     }
   };
 
+  if (!moviesByGenres) {
+    return;
+  }
+
+  const totalPages =
+    moviesByGenres.total_pages <= 500 ? moviesByGenres.total_pages : 500;
+
   return (
     <>
       <div>
@@ -94,11 +101,13 @@ const MoviesByGenreList = () => {
             >
               <img src={arrowLeft} alt="Prev page" />
             </Button>
-            <span>{page} / 500</span>
+            <span>
+              {page} / {totalPages}
+            </span>
             <Button
               className="ms-3 py-0"
               onClick={handleNextPage}
-              disabled={page === 500}
+              disabled={page === totalPages}
             >
               <img src={arrowRight} alt="Next page" />
             </Button>
