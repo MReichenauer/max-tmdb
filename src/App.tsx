@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import MoviesByGenrePage from "./pages/MoviesByGenrePage";
 import MovieByIdPage from "./pages/MovieByIdPage";
 import PersonByIdPage from "./pages/PersonByIdPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/genres/:id" element={<MoviesByGenrePage />} />
         <Route path="/movie/:id" element={<MovieByIdPage />} />
         <Route path="/people/:id" element={<PersonByIdPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );

@@ -41,7 +41,7 @@ const MoviesByGenreList = () => {
   let currentGenre = "";
   if (isSuccessGenres) {
     const genre = allGenres.find((genre) => genre.id === genreId);
-    currentGenre = genre ? genre.name : "Genre kan ej hittas";
+    currentGenre = genre ? genre.name : "status: 404, Genre kan ej hittas";
   }
 
   const handleNextPage = () => {
