@@ -60,7 +60,7 @@ const NavBar = () => {
                 <Nav.Link as={NavLink} to="/" onClick={handleClose}>
                   Hem
                 </Nav.Link>
-                <NavDropdown title="Genre">
+                <NavDropdown className="smalbox" title="Genre">
                   {allGenres.map((genre) => (
                     <NavDropdown.Item
                       as={NavLink}

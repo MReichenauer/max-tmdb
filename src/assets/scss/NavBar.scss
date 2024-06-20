@@ -5,4 +5,14 @@
   z-index: 9999;
   background-color: inherit;
   color: inherit;
+ 
+}
+
+.smalbox > div {
+  position: relative;
+  height:fit-content;
+  max-height: 75vh;
+  overflow: scroll;
+  overflow-x: hidden;
+ 
 }
