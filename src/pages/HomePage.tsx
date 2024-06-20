@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import CinemaMovieList from "../components/lists/CinemaMovieList";
 import TopRatedMovieList from "../components/lists/TopRatedMovieList";
 import TrendingMovieList from "../components/lists/TrendingMovieList";

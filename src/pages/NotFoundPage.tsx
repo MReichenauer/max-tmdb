@@ -1,5 +1,5 @@
-import { Image } from "react-bootstrap";
 import "../assets/scss/NotFoundPage.scss";
+import Image from "react-bootstrap/Image";
 import soLost from "../assets/img/soLost.png";
 import { Link } from "react-router-dom";
 

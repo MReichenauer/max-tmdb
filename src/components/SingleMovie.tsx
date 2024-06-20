@@ -2,7 +2,7 @@ import Loading from "./Loading";
 import useMovieById from "../hooks/useMovieById";
 import { Link, useParams } from "react-router-dom";
 import DetailCard from "./cards/DetailCard";
-import { Button } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 import noImage from "../assets/img/no-image-6665.png";
 import noImageSquare from "../assets/img/noimageSquare.jpg";
 import ActorOrCrewCard from "./cards/ActorOrCrewCard";

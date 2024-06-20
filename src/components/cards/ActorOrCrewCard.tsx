@@ -1,5 +1,5 @@
-import { Card } from "react-bootstrap";
 import "../../assets/scss/ActorOrCrewCard.scss";
+import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
 type ActorOrCrewCardProps = {

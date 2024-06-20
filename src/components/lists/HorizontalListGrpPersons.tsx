@@ -1,5 +1,5 @@
 import "../../assets/scss/HorizontalListGrpPersons.scss";
-import { ListGroup } from "react-bootstrap";
+import ListGroup from "react-bootstrap/ListGroup";
 import { ReactNode } from "react";
 
 type HorizontalListGrpPersonsProps = {

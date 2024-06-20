@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import MoviesByGenreList from "../components/lists/MoviesByGenreList";
 
 const MoviesByGenrePage = () => {

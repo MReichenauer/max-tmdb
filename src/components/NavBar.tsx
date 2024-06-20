@@ -1,13 +1,13 @@
+import "../assets/scss/NavBar.scss";
+import "../assets/scss/ThemeButton.scss";
 import { useContext, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { ThemeContext } from "./ThemeProvider";
-import "../assets/scss/ThemeButton.scss";
 import { NavLink } from "react-router-dom";
 import useAllGenres from "../hooks/useAllGenres";
-import "../assets/scss/NavBar.scss";
 
 const NavBar = () => {
   const [expanded, setExpanded] = useState(false);

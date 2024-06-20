@@ -1,5 +1,5 @@
 import "../../assets/scss/DetailCard.scss";
-import { Card } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
 
 type DetailCardProps = {
   id: number;

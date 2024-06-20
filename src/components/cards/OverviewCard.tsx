@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import "../../assets/scss/OverviewCard.scss";
-import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Card from "react-bootstrap/Card";
 
 type OverviewCardProps = {
   id: number;
